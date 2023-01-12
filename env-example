@@ -11,3 +11,5 @@ VERSION=1.0.0
 
 DATABASE_URI=postgresql+asyncpg://postgres:postgres@localhost/webtronics
 PASSWORD_SECRET_SALT=c3bc22e35913eceb003fbec8e07c45d981872e15cccbdf7e9b44d6c424f53177
+
+FASTAPI_PORT=8888
