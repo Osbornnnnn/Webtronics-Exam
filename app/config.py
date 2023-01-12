@@ -16,5 +16,5 @@ TITLE = env.str("TITLE", default="TITLE_EXAMPLE")
 DESCRIPTION = env.str("DESCRIPTION", default="DESCRIPTION_EXAMPLE")
 VERSION = env.str("VERSION", default="1.0.0")
 
-DATABASE_URI = env.str("DATABASE_URI", default="postgresql+asyncpg://postgres:postgres@postgres_db/webtronics")
+DATABASE_URI = env.str("DATABASE_URI", default="postgresql+asyncpg://postgres:postgres@localhost/webtronics")
 PASSWORD_SECRET_SALT = env.str("PASSWORD_SECRET_SALT", default="c3bc22e35913eceb003fbec8e07c45d981872e15cccbdf7e9b44d6c424f53177")

@@ -11,4 +11,5 @@ RUN pip install -r requirements.txt
 COPY app /opt/Webtronics/app
 
 WORKDIR /opt/Webtronics/app
-CMD python -m uvicorn main:application --reload
+
+CMD ["uvicorn", "main:application", "--host", "0.0.0.0", "--port", "8000"]
