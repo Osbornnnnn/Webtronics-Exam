@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+    app:
+        build:
+            dockerfile: Dockerfile
+        container_name: app
+        restart: always
+        ports:
+            - "${FASTAPI_PORT}:8000"
+        environment:
+            TIMEZONE: ${TIMEZONE}
+            SECRET_KEY: ${SECRET_KEY}
+            ALGORITHM: ${ALGORITHM}
+            ACCESS_TOKEN_EXPIRE: ${ACCESS_TOKEN_EXPIRE}
+            REFRESH_TOKEN_EXPIRE: ${REFRESH_TOKEN_EXPIRE}
+            REFRESH_TOKEN_KEY: ${REFRESH_TOKEN_KEY}
+            TITLE: ${TITLE}
+            DESCRIPTION: ${DESCRIPTION}
+            VERSION: ${VERSION}
+            DATABASE_URI: ${DATABASE_URI}
+            PASSWORD_SECRET_SALT: ${PASSWORD_SECRET_SALT}
+        depends_on:
+            - postgres_db
+
+    postgres_db:
+        image: postgres:15.1
+        container_name: postgres_db
+        restart: always
+        environment:
+            POSTGRES_DB: webtronics
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres

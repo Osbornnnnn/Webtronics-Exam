@@ -1,0 +1,10 @@
+asyncpg==0.27.0
+envparse==0.2.0
+fastapi==0.89.0
+pydantic==1.10.4
+PyJWT==2.6.0
+python-multipart==0.0.5
+pytz==2022.7
+SQLAlchemy==1.4.46
+ujson==5.7.0
+uvicorn==0.20.0
